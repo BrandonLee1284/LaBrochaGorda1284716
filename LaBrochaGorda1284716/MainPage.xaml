@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LaBrochaGorda1284716"
+             x:Class="LaBrochaGorda1284716.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:Costo />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+        <Label Text="Área (m²):" />
+        <Entry Keyboard="Numeric" 
+            Text="{Binding Area, Mode=TwoWay}" />
+
+        <Label Text="Precio por m²:" />
+        <Entry Keyboard="Numeric" 
+            Text="{Binding PrecioPorMetro, Mode=TwoWay}" />
+
+        <Label Text="Total:" />
+        <Label Text="{Binding Total}" />
+    </StackLayout>
+
+</ContentPage>
